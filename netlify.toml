@@ -1,0 +1,19 @@
+[build]
+  # Keep the publish directory as the root so it can find your other assets
+  publish = "."
+
+[[redirects]]
+  # Redirect the root (/) to your specific HTML file
+  from = "/"
+  to = "/images/new.html"
+  # Status 200 is a 'rewrite'—the user stays at your-site.netlify.app 
+  # but sees the content of images/new.html
+  status = 200
+  force = true
+
+[[redirects]]
+  # Optional: ensure all other sub-paths also point to the main game file
+  # (Standard for Single Page Applications/Games)
+  from = "/*"
+  to = "/images/new.html"
+  status = 200
